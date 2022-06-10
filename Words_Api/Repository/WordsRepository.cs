@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 using Words_Api.Models;
 
 namespace Words_Api.Repository
@@ -9,7 +9,7 @@ namespace Words_Api.Repository
 
         public WordsRepository()
         {
-            using (StreamReader r = new StreamReader("C:\\Users\\sbena\\Desktop\\Nouveau dossier (2)\\Words_Api\\Models\\words(3000000).json"))
+            using (StreamReader r = new StreamReader("C:\\Users\\sbena\\Desktop\\Nouveau dossier (2)\\motus\\Words_Api\\Models\\words(300000).json"))
             {
                 string json = r.ReadToEnd();
                 WordsList = JsonSerializer.Deserialize<Dictionary<string, string>>(json);

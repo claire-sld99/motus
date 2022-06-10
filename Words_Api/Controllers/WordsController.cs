@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Words_Api.Services;
 
@@ -16,9 +16,9 @@ namespace Words_Api.Controllers
         }
 
         [HttpGet]
-        public string GetWord()
+        public IActionResult GetWord()
         {
-            return this.wordsService.PickRandomWord();
+            return this.Ok(this.wordsService.PickRandomWord());
         }
 
         [HttpGet("{word}")]

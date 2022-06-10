@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MotusServiceService } from '../services/motus-service.service';
 
 @Component({
   selector: 'app-motus',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./motus.component.css']
 })
 export class MotusComponent implements OnInit {
+  wordChoose: string[];
 
-  constructor() { }
+  constructor(private motusService: MotusServiceService) { }
 
   ngOnInit(): void {
+    this.motusService.findWordRandom().subscribe(
+      (data) =>{
+        this.wordChoose = data;
+      }
+    )
   }
 
 }
