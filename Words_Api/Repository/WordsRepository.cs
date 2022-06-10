@@ -9,7 +9,7 @@ namespace Words_Api.Repository
 
         public WordsRepository()
         {
-            using (StreamReader r = new StreamReader("C:\\Users\\sbena\\Desktop\\Nouveau dossier (2)\\motus\\Words_Api\\Models\\words(300000).json"))
+            using (StreamReader r = new StreamReader("..\\Words_Api\\Models\\words.json"))
             {
                 string json = r.ReadToEnd();
                 WordsList = JsonSerializer.Deserialize<Dictionary<string, string>>(json);

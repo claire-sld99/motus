@@ -17,7 +17,7 @@ namespace Words_Api.Services
     {
       Random rdn = new Random();
       var test = new List<string>();
-      var word = this.wordsRepository.GetWord(rdn.Next(0, 250000).ToString());
+      var word = this.wordsRepository.GetWord(rdn.Next(0, 474).ToString());
 
       foreach (var item in word)
       {
